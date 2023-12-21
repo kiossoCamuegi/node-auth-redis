@@ -1,0 +1,13 @@
+
+####
+POST  http://localhost:9000/users/login
+content-type: application/json
+
+{
+    "username": "pedro",
+    "password": "12345"
+}
+
+
+###
+GET http://localhost:5000/eduallgetsingleclassdata/get/22
