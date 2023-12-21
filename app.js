@@ -14,7 +14,10 @@ var languagesRouter = require('./routes/languages');
 const {createClient} = require("redis");
 const connectRedis =  require("connect-redis");
 const mongoose =  require("mongoose");
-const  RedisClient  = createClient({legacyMode:true});
+const  RedisClient  = createClient({
+    url:process.env.REDIS_URL,
+    legacyMode:true
+});
 
 mongoose.connect(process.env.DATABASE_URL ,{useNewUrlParser:true})
 const DB = mongoose.connection;
